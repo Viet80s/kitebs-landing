@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Archivo } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 
 // Font files can be colocated inside of `pages`
-const myFont = Inter({ subsets: ["latin"] });
+const myFont = Archivo({ subsets: ["latin"] });
 
 export const viewport: Viewport = {
   width: "device-width",

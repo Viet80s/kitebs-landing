@@ -21,7 +21,7 @@ export const NavMobile = () => {
           </Link>
         </div>
         <div className="text-vang text-lg font-bold">KITE VOUCHER SITE</div>
-        <div className="w-[70px]"></div>
+        <div className="w-[40px]"></div>
       </div>
     </div>
   );
