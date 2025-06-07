@@ -41,12 +41,7 @@ const AutoPlayMobile = () => {
   };
 
   return (
-    <div>
-      <h3 className="text-center py-6 bg-primary-foreground sm:p-4 p-2 items-center justify-center flex">
-        <Button className="text-white border-2 border-white rounded-2xl text-lg">
-          ORDER ONLINE
-        </Button>
-      </h3>
+    <div className="w-full mt-[90px]">
       <Slider {...settings}>
         {Images.map((image, index) => (
           <div key={index}>
@@ -68,10 +63,12 @@ const AutoPlayMobile = () => {
       </Slider>
       <div className="flex justify-center items-center">
         <h1 className="text-cam text-pretty text-sm font-bold">
-          Free Drink at VietCyclo Rewards
+          Free Drink at VietCyclo
         </h1>
-        <Button className="bg-vang text-white rounded-lg px-4 text-sm py-2 ml-2">
-          <Link href="https://vietcyclo.co.uk/rewards">Become a Member</Link>
+        <Button className="bg-vang text-white animate-pulse rounded-lg px-4 text-sm py-2 ml-2">
+          <Link href="https://vietcyclo.co.uk/rewards">
+            Become a Member today
+          </Link>
         </Button>
       </div>
     </div>

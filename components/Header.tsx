@@ -3,17 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 
-
 export const NavMobile = () => {
-
-
   return (
-    <div
-  
-      className={`fixed top-0 w-full z-50 backdrop-blur lg:hidden bg-xanh transition-all duration-300 `}
-    >
+    <div className={`fixed top-0 w-full z-50 backdrop-blur bg-xanh`}>
       <div className="flex items-center justify-between mx-5 text-xanh">
-       
         {/*Title */}
         <div>
           <Link href="/" className="text-xl">
@@ -27,12 +20,8 @@ export const NavMobile = () => {
             />
           </Link>
         </div>
-        <div className="text-vang text-lg font-bold">
-          KITE VOUCHER SITE
-        </div>
-        <div className="w-[70px]">
-         
-        </div>
+        <div className="text-vang text-lg font-bold">KITE VOUCHER SITE</div>
+        <div className="w-[70px]"></div>
       </div>
     </div>
   );

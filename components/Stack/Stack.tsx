@@ -75,7 +75,7 @@ export default function Stack({
     navigator.clipboard
       .writeText(code)
       .then(() => {
-        toast.success(`Code "${code}" copied to clipboard!`, {
+        toast.success(`Code ${code} copied to clipboard!`, {
           duration: 2000,
         });
       })
