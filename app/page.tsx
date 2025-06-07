@@ -14,7 +14,6 @@ export default function LandingPage() {
 
       <main className="flex-1">
         <AutoPlayMobile />
-        <HeroSection />
         <PromoSection />
         <AboutSection />
         <LocationSection />

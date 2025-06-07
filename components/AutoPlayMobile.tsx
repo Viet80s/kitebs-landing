@@ -27,7 +27,6 @@ const AutoPlayMobile = () => {
     },
   ];
 
-
   const settings = {
     dots: false,
     infinite: true,
@@ -40,7 +39,6 @@ const AutoPlayMobile = () => {
     nextArrow: <></>,
     prevArrow: <></>,
   };
-
 
   return (
     <div>
@@ -68,6 +66,14 @@ const AutoPlayMobile = () => {
           </div>
         ))}
       </Slider>
+      <div className="flex justify-center items-center">
+        <h1 className="text-cam text-pretty text-sm font-bold">
+          Free Drink at VietCyclo Rewards
+        </h1>
+        <Button className="bg-vang text-white rounded-lg px-4 text-sm py-2 ml-2">
+          <Link href="https://vietcyclo.co.uk/rewards">Become a Member</Link>
+        </Button>
+      </div>
     </div>
   );
 };

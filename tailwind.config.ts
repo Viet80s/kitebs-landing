@@ -46,10 +46,10 @@ const config: Config = {
         vang: {
           DEFAULT: "#f7ad19",
         },
-		cam: {
+        cam: {
           DEFAULT: "#ff7028",
         },
-		do: {
+        do: {
           DEFAULT: "#b70000",
         },
         border: "hsl(var(--border))",
