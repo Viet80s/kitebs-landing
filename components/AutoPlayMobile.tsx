@@ -33,7 +33,7 @@ const AutoPlayMobile = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3500,
+    autoplaySpeed: 3000,
     fade: true,
     pauseOnHover: false,
     nextArrow: <></>,

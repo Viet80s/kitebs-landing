@@ -1,24 +1,17 @@
 import { useEffect, useState, useRef } from "react";
-import { motion, PanInfo, useMotionValue, useTransform } from "framer-motion";
-// replace icons with your own if needed
-import {
-  FiCircle,
-  FiCode,
-  FiFileText,
-  FiLayers,
-  FiLayout,
-} from "react-icons/fi";
+import { motion, PanInfo, useTransform, useMotionValue } from "framer-motion";
+import toast from "react-hot-toast";
 
 export interface CarouselItem {
-  title: string;
-  description: string;
   id: number;
-  icon: JSX.Element;
+  img: string;
+  code: string;
 }
 
 export interface CarouselProps {
   items?: CarouselItem[];
   baseWidth?: number;
+  itemHeight?: number; // Height for items, default is 200px
   autoplay?: boolean;
   autoplayDelay?: number;
   pauseOnHover?: boolean;
@@ -28,34 +21,49 @@ export interface CarouselProps {
 
 const DEFAULT_ITEMS: CarouselItem[] = [
   {
-    title: "Text Animations",
-    description: "Cool text animations for your projects.",
     id: 1,
-    icon: <FiFileText className="h-[16px] w-[16px] text-white" />,
+    img: "/pictures/voucher/promo-1.webp",
+    code: "ZZBO7WH480",
   },
   {
-    title: "Animations",
-    description: "Smooth animations for your projects.",
     id: 2,
-    icon: <FiCircle className="h-[16px] w-[16px] text-white" />,
+    img: "/pictures/voucher/promo-2.webp",
+    code: "ADG1V7345B",
   },
   {
-    title: "Components",
-    description: "Reusable components for your projects.",
     id: 3,
-    icon: <FiLayers className="h-[16px] w-[16px] text-white" />,
+    img: "/pictures/voucher/promo-3.webp",
+    code: "76ZYHUQ382",
   },
   {
-    title: "Backgrounds",
-    description: "Beautiful backgrounds and patterns for your projects.",
     id: 4,
-    icon: <FiLayout className="h-[16px] w-[16px] text-white" />,
+    img: "/pictures/voucher/promo-4.webp",
+    code: "UYWTS676FH",
   },
   {
-    title: "Common UI",
-    description: "Common UI components are coming soon!",
     id: 5,
-    icon: <FiCode className="h-[16px] w-[16px] text-white" />,
+    img: "/pictures/voucher/promo-5.webp",
+    code: "580763GOXH",
+  },
+  {
+    id: 6,
+    img: "/pictures/voucher/promo-6.webp",
+    code: "QR59O9F0LS",
+  },
+  {
+    id: 7,
+    img: "/pictures/voucher/promo-7.webp",
+    code: "9EVQS0P4MT",
+  },
+  {
+    id: 8,
+    img: "/pictures/voucher/promo-8.webp",
+    code: "M36NJYEG62",
+  },
+  {
+    id: 9,
+    img: "/pictures/voucher/promo-9.webp",
+    code: "7W9F754251",
   },
 ];
 
@@ -72,6 +80,7 @@ export default function Carousel({
   pauseOnHover = false,
   loop = false,
   round = false,
+  itemHeight = 200, // Default height for items
 }: CarouselProps): JSX.Element {
   const containerPadding = 16;
   const itemWidth = baseWidth - containerPadding * 2;
@@ -164,6 +173,19 @@ export default function Carousel({
         },
       };
 
+  const handleCopy = (code: string) => {
+    navigator.clipboard
+      .writeText(code)
+      .then(() => {
+        toast.success(`Code ${code} copied to clipboard!`, {
+          duration: 2000,
+        });
+      })
+      .catch((err) => {
+        console.error("Failed to copy code: ", err);
+      });
+  };
+
   return (
     <div
       ref={containerRef}
@@ -201,31 +223,23 @@ export default function Carousel({
           const rotateY = useTransform(x, range, outputRange, { clamp: false });
           return (
             <motion.div
-              key={index}
-              className={`relative shrink-0 flex flex-col ${
-                round
-                  ? "items-center justify-center text-center bg-[#060606] border-0"
-                  : "items-start justify-between bg-[#222] border border-[#222] rounded-[12px]"
-              } overflow-hidden cursor-grab active:cursor-grabbing`}
+              key={item.id}
+              className={`relative shrink-0 flex flex-col items-center justify-center rounded-[12px] overflow-hidden cursor-pointer`}
               style={{
                 width: itemWidth,
-                height: round ? itemWidth : "100%",
+                height: itemHeight,
                 rotateY: rotateY,
                 ...(round && { borderRadius: "50%" }),
               }}
               transition={effectiveTransition}
+              onClick={() => handleCopy(item.code)}
             >
-              <div className={`${round ? "p-0 m-0" : "mb-4 p-5"}`}>
-                <span className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-[#060606]">
-                  {item.icon}
-                </span>
-              </div>
-              <div className="p-5">
-                <div className="mb-1 font-black text-lg text-white">
-                  {item.title}
-                </div>
-                <p className="text-sm text-white">{item.description}</p>
-              </div>
+              <img
+                src={item.img}
+                alt={`Voucher ${item.id}`}
+                className="w-full object-cover"
+                draggable={false}
+              />
             </motion.div>
           );
         })}
@@ -235,7 +249,7 @@ export default function Carousel({
           round ? "absolute z-20 bottom-12 left-1/2 -translate-x-1/2" : ""
         }`}
       >
-        <div className="mt-4 flex w-[150px] justify-between px-8">
+        <div className="mt-2 flex w-[250px] justify-between px-8">
           {items.map((_, index) => (
             <motion.div
               key={index}

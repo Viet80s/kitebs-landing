@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "Corporate Vouchers",
     "Employee Benefits",
     "Workplace Solutions",
-    "vouchers"
+    "vouchers",
   ],
   robots: {
     index: true,
@@ -82,8 +82,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={myFont.className}>
-          {children}
-          <Toaster />
+        {children}
+        <Toaster />
       </body>
     </html>
   );

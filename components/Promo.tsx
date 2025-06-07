@@ -1,5 +1,5 @@
 import { AnimatedShinyTextDemo } from "@/components/FancyButton";
-import StackComponent from "@/components/Stack";
+import CarouselComponent from "./Carousel";
 
 export default function PromoSection() {
   return (
@@ -11,7 +11,7 @@ export default function PromoSection() {
             <h2 className="text-md">TO FIND LIMITED VOUCHER </h2>
           </div>
         </div>
-        <StackComponent />
+        <CarouselComponent />
       </div>
     </section>
   );

@@ -1,10 +1,9 @@
 "use client";
-import AboutSection from "@/components/About";
+
 import AutoPlayMobile from "@/components/AutoPlayMobile";
 import CTASection from "@/components/CTA";
 import Footer from "@/components/Footer";
 import { NavMobile } from "@/components/Header";
-import HeroSection from "@/components/Hero";
 import LocationSection from "@/components/Location";
 import PromoSection from "@/components/Promo";
 import { useEffect, useState } from "react";
@@ -51,18 +50,17 @@ export default function LandingPage() {
           />
         </div>
       )}
-      <div className="flex min-h-screen flex-col">
+      <div className="flex min-h-screen flex-col items-center">
         <NavMobile />
-
-        <main className="flex-1">
-          <AutoPlayMobile />
-          <PromoSection />
-          <AboutSection />
-          <LocationSection />
-          <CTASection />
-        </main>
-
-        <Footer />
+        <div className="w-full sm:w-1/2 mx-auto flex flex-col min-h-screen">
+          <main className="flex-1">
+            <AutoPlayMobile />
+            <PromoSection />
+            <LocationSection />
+            <CTASection />
+          </main>
+          <Footer />
+        </div>
       </div>
     </>
   );

@@ -4,18 +4,20 @@ import { Button } from "@/components/ui/button";
 
 export default function CTASection() {
   return (
-    <section className="py-16 bg-amber-100">
+    <section className="py-16 bg-white">
       <div className="container px-4 md:px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-amber-900 mb-4">
-          Ready to Experience VietCyclo?
+        <h2 className=" md:text-4xl font-bold text-xanh mb-2 text-pretty">
+          JOINING OUR PARTNER HUB TO GET YOUR BUSINESS SEEN
         </h2>
-        <p className="text-amber-800/80 max-w-2xl mx-auto mb-8">
-          Don&apos;t forget to bring your promo code for special discounts on
-          your visit!
-        </p>
-        <Link href="#promo">
-          <Button size="lg" className="bg-amber-700 hover:bg-amber-800">
-            View All Promotions <ChevronRight className="ml-2 h-4 w-4" />
+        <h2 className="md:text-4xl text-xanh/90 mb-4 text-pretty">
+          FREE CONSULTATION AND 3 MONTHS OF PROMOTION
+        </h2>
+        <Link href="https://kitebusinesssolution.com/contact" target="_blank">
+          <Button
+            size="lg"
+            className="w-full bg-xanh text-vang text-lg rounded-3xl hover:bg-amber-800"
+          >
+            LEAVE YOUR CONTACT <ChevronRight className="h-4 w-4" />
           </Button>
         </Link>
       </div>
