@@ -3,6 +3,7 @@ import Link from "next/link";
 import Stack from "./Stack/Stack";
 import { Button } from "./ui/button";
 import { TicketCheck } from "lucide-react";
+import Carousel from "./Carousel/Carousel";
 
 export default function StackComponent() {
   const images = [
@@ -55,12 +56,13 @@ export default function StackComponent() {
 
   return (
     <div className="flex flex-col items-center justify-center my-10">
-      <Stack
-        randomRotation={true}
-        sensitivity={180}
-        sendToBackOnClick={false}
-        cardDimensions={{ width: 270, height: 360 }}
-        cardsData={images}
+      <Carousel
+        baseWidth={300}
+        autoplay={true}
+        autoplayDelay={3000}
+        pauseOnHover={true}
+        loop={true}
+        round={false}
       />
       <Link href="https://vietcyclo.co.uk/rewards">
         <Button
