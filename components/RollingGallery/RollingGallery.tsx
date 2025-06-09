@@ -121,7 +121,7 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
   };
 
   return (
-    <div className="relative h-[200px] w-full overflow-hidden">
+    <div className="relative h-[200px] sm:h-[350px] w-full overflow-hidden">
       <div className="flex h-full items-center justify-center [perspective:1000px] [transform-style:preserve-3d]">
         <motion.div
           drag="x"
@@ -154,7 +154,7 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
               <img
                 src={url}
                 alt="gallery"
-                className="pointer-events-none h-[120px] w-[300px] rounded-[15px] border-[3px] border-white object-cover transition-transform duration-300 ease-out group-hover:scale-105 sm:h-[100px] sm:w-[220px]"
+                className="pointer-events-none sm:h-[220px] sm:w-[165px] h-[135px] w-[130px] rounded-lg sm:rounded-[15px] object-cover transition-transform duration-300 ease-out group-hover:scale-105 sm:h-[100px] sm:w-[220px]"
               />
             </div>
           ))}

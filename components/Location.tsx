@@ -12,12 +12,15 @@ export default function LocationSection() {
           <h2 className="mt-5 text-pretty md:text-4xl font-bold text-white mb-4">
             We work directly with our partners so you
           </h2>
-          <p className="text-white max-w-2xl font-bold mx-auto">
-            <span className="text-vang text-2xl mr-2">NEVER</span> have to{" "}
-            <span className="text-vang text-2xl ml-2">PAY FULL PRICE</span>
+          <p className="text-white max-w-2xl md:text-4xl font-bold mx-auto">
+            <span className="text-vang text-2xl md:text-4xl mr-2">NEVER</span>{" "}
+            have to{" "}
+            <span className="text-vang text-2xl md:text-4xl ml-2">
+              PAY FULL PRICE
+            </span>
           </p>
         </div>
-        <div className="flex flex-col md:flex-row items-start justify-left gap-4 mb-8">
+        <div className="flex flex-col items-start justify-left gap-4 mb-8">
           <h1 className="text-white text-left md:text-3xl font-bold self-start">
             Visit Nottingham's most Authentic Kitchen
           </h1>
@@ -48,7 +51,7 @@ export default function LocationSection() {
             </Button>
           </Link>
         </div>
-        <div className="flex flex-col md:flex-row items-start justify-left gap-4 mb-8">
+        <div className="flex flex-col items-start justify-left gap-4 mb-8">
           <h1 className="text-white text-left md:text-3xl font-bold self-start">
             Visit Nottingham's Newest Brunch Spot
           </h1>
