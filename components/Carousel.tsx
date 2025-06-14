@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import Stack from "./Stack/Stack";
 import { Button } from "./ui/button";
 import { SquareArrowOutUpRight, TicketCheck } from "lucide-react";
 import Carousel from "./Carousel/Carousel";

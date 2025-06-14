@@ -22,7 +22,7 @@ export interface CarouselProps {
 const DEFAULT_ITEMS: CarouselItem[] = [
   {
     id: 1,
-    img: "/pictures/voucher/promo-1.webp",
+    img: "/pictures/voucher/promo-01-fixed.webp",
     code: "ZZBO7WH480",
   },
   {

@@ -1,4 +1,3 @@
-import { AnimatedShinyTextDemo } from "@/components/FancyButton";
 import CarouselComponent from "./Carousel";
 
 export default function PromoSection() {
