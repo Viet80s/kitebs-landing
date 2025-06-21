@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Archivo } from "next/font/google";
 import { Toaster } from "react-hot-toast";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 // Font files can be colocated inside of `pages`
 const myFont = Archivo({ subsets: ["latin"] });
@@ -85,6 +86,7 @@ export default function RootLayout({
         {children}
         <Toaster />
       </body>
+      <GoogleAnalytics gaId="G-3PMQ7TKB9H" />
     </html>
   );
 }

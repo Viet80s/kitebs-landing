@@ -7,8 +7,13 @@ import { NavMobile } from "@/components/Header";
 import LocationSection from "@/components/Location";
 import PromoSection from "@/components/Promo";
 import { useEffect, useState } from "react";
+import Clarity from "@microsoft/clarity";
 
 export default function LandingPage() {
+  useEffect(() => {
+    Clarity.init("s2z39pmgwz");
+  }, []);
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
